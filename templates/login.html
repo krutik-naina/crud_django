@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            a{
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            function insert()
+            {
+                return confirm("Data Insert")
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <center>
+            <form method="POST" action="/insert/">
+                <h1 style="color: red;">Fill a Form</h1>
+                {%csrf_token%}
+            <h3>Name &nbsp; &nbsp; &nbsp; &nbsp;<input type="txt" name="oname"></h3>
+            <h3>Email &nbsp; &nbsp; &nbsp; &nbsp;<input type="email" name="oemail"></h3>
+            <h3>Phone &nbsp; &nbsp; &nbsp; &nbsp;<input type="phone" name="ophone"></h3>
+            <h3>City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="txt" name="ocity"></h3>
+            <input type="submit" value="Insert" onclick="insert()" style="cursor: pointer;"> 
+            <button><a href="/account/">Showdata</a></button>
+            </form>
+            </center>
+        </div>
+    </body>
+</html>

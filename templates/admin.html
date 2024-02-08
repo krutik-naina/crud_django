@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            a{
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            function update()
+            {
+            return confirm("Data Update")
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <center>
+            <form action="/update/">
+                <h1 style="color: red;">Your Profile</h1>                
+            <h3>Name &nbsp; &nbsp; &nbsp; &nbsp;<input type="txt" value="{{showdata.oname}}" name="oname"></h3>
+            <h3>Email &nbsp; &nbsp; &nbsp; &nbsp;<input type="email" value="{{showdata.oemail}}" name="oemail"></h3>
+            <h3>Phone &nbsp; &nbsp; &nbsp; &nbsp;<input type="phone" value="{{showdata.ophone}}" name="ophone"></h3>
+            <h3>City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="txt" value="{{showdata.ocity}}" name="ocity"></h3>
+            <input type="submit" value="Update" onclick="update()" style="cursor: pointer;"> <button><a href="/account/">Showdata</a></button>
+            </form>
+            </center>
+        </div>
+    </body>
+</html>

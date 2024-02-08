@@ -1,0 +1,42 @@
+<html>
+<head>
+	<style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+	<script>
+		function deletes()
+		{
+			alert("You want Delete Data");
+		}
+	</script>
+</head>
+</head>
+<body>
+<center>
+<table border="2" width="100%">
+	<tr bgcolor="red" style="color:white;">
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+        <th>City</th>
+		<th>Update</th>
+        <th>Delete</th>
+
+	</tr>
+    {% for x in showdata %}
+	<tr>
+		<th>{{x.oname}}</th>
+		<th>{{x.oemail}}</th>
+		<th>{{x.ophone}}</th>
+        <th>{{x.ocity}}</th>
+		<th width="16%"><a href="/myprofile/{{ x.oname }}">{{ x.oname }}</a></th>
+        <th><a href="/delete/{{ x.oname }}" onclick="deletes()">Delete</a></th>
+	</tr>
+    {% endfor %}
+
+</table>
+</center>
+</body>
+</html>
